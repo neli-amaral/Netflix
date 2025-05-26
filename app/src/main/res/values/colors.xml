@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primaria">#A4C8DB</color>
+    <color name="primariavariant">#06B7F6</color>
+    <color name="secundaria">#E04545</color>
+    <color name="menu_navegacao">@color/white</color>
+
+
+</resources>
