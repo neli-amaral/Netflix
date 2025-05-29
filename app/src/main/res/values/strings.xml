@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Netflix</string>
+    <string name="s_ries">Séries</string>
+    <string name="filmes">Filmes</string>
+    <string name="minha_lista">Minha Lista</string>
+    <string name="terror">Terror</string>
+    <string name="violento">Violento</string>
+    <string name="medo">Medo</string>
+    <string name="assistir">Assistir</string>
+    <string name="detalhes">DETALHES</string>
+    <string name="lan_amentos">Lançamentos</string>
+    <string name="minha_listaa">MINHA LISTA</string>
 </resources>

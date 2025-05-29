@@ -9,6 +9,18 @@
 
 
     <ImageView
+        android:id="@+id/imageViewCapa"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineTop"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ruadomedo" />
+
+    <ImageView
         android:id="@+id/imageViewLogo"
         android:layout_width="43dp"
         android:layout_height="60dp"
@@ -23,8 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:text="Séries"
+        android:text="@string/s_ries"
         android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewLogo"
         app:layout_constraintStart_toEndOf="@+id/imageViewLogo"
         app:layout_constraintTop_toTopOf="@+id/imageViewLogo"
@@ -35,8 +48,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:text="Filmes"
+        android:text="@string/filmes"
         android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewSeries"
         app:layout_constraintStart_toEndOf="@+id/textViewSeries"
         app:layout_constraintTop_toTopOf="@+id/textViewSeries"
@@ -47,8 +61,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
-        android:text="Minha Lista"
+        android:text="@string/minha_lista"
         android:textColor="@color/menu_navegacao"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/textViewFilmes"
         app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
         app:layout_constraintHorizontal_bias="0.0"
@@ -61,36 +76,170 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.10" />
+        app:layout_constraintBottom_toTopOf="@+id/guidelineDireita"
+        app:layout_constraintGuide_percent="0.10"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCapa" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineDireita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="445dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.90" />
+        app:layout_constraintBottom_toTopOf="@+id/textViewNome"
+        app:layout_constraintGuide_percent="0.90"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineEsquerda" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineTop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.11" />
+        app:layout_constraintEnd_toStartOf="@+id/guidelineBottom"
+        app:layout_constraintGuide_percent="0.11"
+        app:layout_constraintStart_toEndOf="@+id/imageViewCapa" />
 
     <Button
         android:id="@+id/buttonAssistir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Assistir"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="296dp" />
+        android:layout_width="118dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="140dp"
+        android:backgroundTint="@color/secundaria"
+        android:drawableLeft="@drawable/ic_executar"
+        android:text="@string/assistir"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageViewCapa"
+        app:layout_constraintTop_toTopOf="@id/textViewViolento" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="411dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.25" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.25"
+        app:layout_constraintStart_toEndOf="@+id/guidelineTop" />
+
+    <TextView
+        android:id="@+id/textViewNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="168dp"
+        android:text="Annelise Bispo Amaral"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda" />
+
+    <TextView
+        android:id="@+id/textViewTerror"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="@string/terror"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        tools:layout_editor_absoluteY="224dp" />
+
+    <TextView
+        android:id="@+id/textViewViolento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/violento"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewTerror"
+        app:layout_constraintTop_toTopOf="@+id/textViewTerror"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="184dp" />
+
+    <TextView
+        android:id="@+id/textViewMedo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="@string/medo"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewViolento"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintTop_toTopOf="@+id/textViewViolento"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textViewLançamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/lan_amentos"
+        android:textColor="@color/menu_navegacao"
+        app:layout_constraintBottom_toTopOf="@+id/imageViewCapa1"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda" />
+
+    <ImageView
+        android:id="@+id/imageViewCapa1"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:srcCompat="@drawable/capa1"
+        tools:layout_editor_absoluteY="404dp" />
+
+    <Button
+        android:id="@+id/buttonMinhaLista"
+        android:layout_width="107dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_adicionar"
+        android:text="@string/minha_listaa"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/buttonAssistir"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        tools:layout_editor_absoluteY="285dp" />
+
+    <Button
+        android:id="@+id/buttonInfo"
+        android:layout_width="107dp"
+        android:layout_height="76dp"
+        android:backgroundTint="@android:color/transparent"
+        android:drawableTop="@drawable/ic_info"
+        android:text="@string/detalhes"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintTop_toTopOf="@id/buttonAssistir"
+        tools:layout_editor_absoluteY="296dp" />
+
+    <ImageView
+        android:id="@+id/imageViewCapa2"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCapa1"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCapa1"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/capa2"
+        tools:layout_editor_absoluteX="163dp" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="85dp"
+        android:layout_height="56dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewCapa2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintTop_toTopOf="@+id/imageViewCapa2"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/capa3" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="284dp"
+        android:layout_height="148dp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewViolento"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineDireita"
+        app:layout_constraintStart_toStartOf="@+id/guidelineEsquerda"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFilmes"
+        app:srcCompat="@drawable/logoo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
